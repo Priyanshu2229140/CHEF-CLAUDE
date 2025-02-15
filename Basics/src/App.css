@@ -1,78 +1,132 @@
+/* Root Container */
 #root {
   max-width: 1280px;
-  margin: 50px;
+  margin: 0 auto;  /* Centering the container */
   padding: 2rem;
   text-align: center;
   background-color: black;
+  border-radius: 5px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-.header{
+/* Header Styling */
+.header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 55px;
+  padding: 0 15px; 
+  border-radius: 10px;
 }
-.header1{
+
+/* Logo Image */
+.image {
+  max-width: 55px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Header Title */
+.para {
   font-size: 30px;
-  font-weight: bolder;
-}
-.nav-list{
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-.list{
-  margin-left: 10px;
-  font-weight: bolder ;
-  font-size: 20px;
-}
-.list1{
-  list-style: none;
-  display: flex;
-  padding: 20px;
-  justify-content: center;
-  font-size: 20px;
-}
-.footer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color:white;
+  font-weight: bold;
+  font-family: "Macondo"; 
   color: black;
-  padding: none;
-  font-size: small;
+}
+
+/* Journal Entry Layout */
+.journal {
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Image Container */
+.image-container {
+  width: 125px;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* Main Image */
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Location Info */
+.location-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Location Icon */
+.location {
+  width: 24px;
+  height: 24px;
+}
+
+/* Country Text */
+.country {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Link Styling */
+.link {
+  font-size: 0.8rem;
+  color: blue;
+  text-decoration: underline;
+}
+
+/* Journal Entry Title */
+.entry-title {
+  margin-top: 5px;
+  font-size: 18px; /* Fixed wrong size */
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+/* Trip Date */
+.trip-dates {
+  font-weight: bold;
+  font-size: 14px; /* Fixed missing size */
+  color: gray;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+/* Entry Text */
+.entry-text {
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 13px;
+  font-weight: normal;
+  font-family: "Macondo";
+  max-width: 380px;
+  margin-top: 3px;
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Info Container */
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 400px;
+  color: black;
 }
