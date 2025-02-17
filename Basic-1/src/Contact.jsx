@@ -1,17 +1,16 @@
 import React from "react";
 
-export default function Contact(props) {
+export default function Student(props) {
     console.log( props);
+
     return (
         <div className="contact-card">
             <h3>{props.name}</h3>
             <div className="info-group">
-                {/* <img src="/images/phone-icon.png" alt="Phone icon" /> */}
-                <p>{props.phone}</p>
+                <p>{props.roll}</p>
             </div>
             <div className="info-group">
-                {/* <img src="/images/mail-icon.png" alt="Mail icon" /> */}
-                <p>{props.email}</p>
+                <p>{props.section}</p>
             </div>
         </div>
     );

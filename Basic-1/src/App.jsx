@@ -1,28 +1,32 @@
 import React from "react";
-import Contact from "./Contact";
+import Student from "./Contact";
 
 function App() {
     return (
-        <div className="contacts">
-            <Contact 
-                name="Mr. Whiskerson"
-                phone="(212) 555-1234"
-                email="mr.whiskaz@catnap.meow"
+        <div className="Student-details">
+            <Student 
+                name="abc"
+                roll="123"
+                section="a"
+                bull={true}
             />
-            <Contact      
-                name="Fluffykins"
-                phone="(212) 555-2345"
-                email="fluff@me.com"
+            <Student      
+                name="bcd"
+                roll="234"
+                section="b"
+                bull={true}
             />
-            <Contact 
-                name="Felix"
-                phone="(212) 555-4567"
-                email="thecat@hotmail.com"
+            <Student 
+                name="cde"
+                roll="345"
+                section="c"
+                bull={true}
             />
-            <Contact 
-                name="Pumpkin"
-                phone="(0800) CAT KING"
-                email="pumpkin@scrimba.com"
+            <Student 
+                name="def"
+                roll="456"
+                section="d"
+                bull={true}
             />
         </div>
     );
