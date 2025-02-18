@@ -1,14 +1,11 @@
-/* Root Container */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;  /* Centering the container */
+  max-width: 90%;
+  margin: 0 auto;  
   padding: 2rem;
   text-align: center;
   background-color: black;
   border-radius: 5px;
 }
-
-/* Header Styling */
 .header {
   display: flex;
   align-items: center;
@@ -18,23 +15,16 @@
   padding: 0 15px; 
   border-radius: 10px;
 }
-
-/* Logo Image */
 .image {
   max-width: 55px;
   height: auto;
   margin-right: 10px;
-}
-
-/* Header Title */
-.para {
+}.para {
   font-size: 30px;
   font-weight: bold;
   font-family: "Macondo"; 
   color: black;
 }
-
-/* Journal Entry Layout */
 .journal {
   margin-top: 10px;
   display: flex;
@@ -44,8 +34,6 @@
   padding: 15px;
   border-radius: 10px;
 }
-
-/* Image Container */
 .image-container {
   width: 125px;
   height: 170px;
@@ -53,76 +41,60 @@
   border-radius: 10px;
   flex-shrink: 0;
 }
-
-/* Main Image */
 .main-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-/* Location Info */
 .location-container {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
-/* Location Icon */
 .location {
   width: 24px;
   height: 24px;
 }
-
-/* Country Text */
 .country {
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: bold;
 }
-
-/* Link Styling */
 .link {
   font-size: 0.8rem;
-  color: blue;
+  color: black;
   text-decoration: underline;
 }
-
-/* Journal Entry Title */
+.link:hover {
+  color: blue;
+}
 .entry-title {
   margin-top: 5px;
-  font-size: 18px; /* Fixed wrong size */
+  font-size: 18px; 
   font-weight: bold;
   margin-bottom: 3px;
 }
-
-/* Trip Date */
 .trip-dates {
   font-weight: bold;
-  font-size: 14px; /* Fixed missing size */
+  font-size: 14px; 
   color: gray;
   margin-top: 3px;
   margin-bottom: 3px;
 }
-
-/* Entry Text */
 .entry-text {
   text-align: justify;
   line-height: 1.5;
   font-size: 13px;
   font-weight: normal;
-  font-family: "Macondo";
   max-width: 380px;
   margin-top: 3px;
   margin-bottom: 4px;
-  overflow: hidden;
+  overflow: visible;
   text-overflow: ellipsis;
-  display: -webkit-box;
+  display: block;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-
-/* Info Container */
 .info-container {
   display: flex;
   flex-direction: column;

@@ -1,18 +1,29 @@
-import './App.css'
-import { createRoot } from "react-dom/client";
+import './App.css';
 import Header from './Header';
-import Main from './Maincontent';
-//import Footer from './Footer';
+import Maincontainer from './Maincontent';
+import data from './data';
 
-const root = createRoot(document.getElementById("root"));
-function Page(){
-  return(
+function Page() {
+  const entryElements = data.map((entry, index) => (
+    <Maincontainer
+      key={index} // Ensure each element has a unique key
+      img={entry.img}
+      title={entry.title}
+      country={entry.country}
+      date={entry.date}
+      link={entry.link}
+      text={entry.text}
+    />
+  ));
+
+  return (
     <>
-      <Header/>
-      <Main/>
-      {/* <Footer/> */}
+      <Header />
+      <main className="container">
+        {entryElements}
+      </main>
     </>
   );
 }
-root.render(<Page />);
+
 export default Page;
