@@ -58,7 +58,7 @@
   border-radius: 10px;
   padding: 4px;
   background: linear-gradient(-67deg, rgba(200, 216, 231, 0.7), rgba(255, 255, 255, 0.8));
-  box-shadow: inset 2px 2px 6px #c5d4e3, inset -2px -2px 4px rgba(255, 255, 255, 0.7);
+  
 }
 
 .icon {
@@ -69,9 +69,7 @@
   justify-content: center;
   border-radius: 10px;
   margin-right: 12px;
-  box-shadow: 
-      -2px -2px 6px rgba(255, 255, 255, 0.6),
-      2px 2px 12px #c8d8e7;
+  box-shadow: inset 2px 2px 6px #c5d4e3, inset -2px -2px 4px rgba(255, 255, 255, 0.7);
 }
 
 .form-input {
@@ -102,7 +100,8 @@
   color: #a9b8c9;
   border: none;
   border-radius: 10px;
-  padding: 10px 20px;
+  padding: 16px 32px;
+  height: auto;
   font-weight: bold;
   cursor: pointer;
   box-shadow: inset 2px 2px 6px #c5d4e3, inset -2px -2px 4px rgba(255, 255, 255, 0.7);
@@ -111,7 +110,7 @@
 
 .form-button:hover {
   transform: scale(1.05);
-  background-color: white;
+  background-color: #15862d;
   color: #3A4750;
 }
 
@@ -170,4 +169,62 @@ li:last-child {
 
 .remove-button:hover {
   color: #c9302c;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  position: absolute; 
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 100%; 
+  max-width: 600px; 
+  padding: 6px 12px;
+  height: 75px;
+  background-color: #e3edf7;
+  color: #a9b8c9;
+  border-radius: 5px;
+  background: linear-gradient(-67deg, rgba(200, 216, 231, 0.7), rgba(255, 255, 255, 0.8));
+  box-shadow: inset 2px 2px 6px #c5d4e3, inset -2px -2px 4px rgba(255, 255, 255, 0.7);
+}
+
+.text-container {
+  text-align: left; 
+  display: flex;
+  flex-direction: column; 
+  width: 100%; 
+}
+
+.text_a {
+  font-weight: 600;
+  text-align: left;
+  gap: 4px;
+  padding-bottom: 5px;   
+}
+
+.text_b {
+  font-size: 14px;
+  color: #3A4750;
+}
+
+.form-button_1 {
+  background: linear-gradient(-67deg, rgba(200, 216, 231, 0.7), rgba(255, 255, 255, 0.8));
+  color: #a9b8c9;
+  border: none;
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: inset 2px 2px 6px #c5d4e3, inset -2px -2px 4px rgba(255, 255, 255, 0.7);
+  transition: transform 0.2s ease;
+}
+
+.form-button_1:hover {
+  color: #3A4750;
+  background-color: #15862d;
+  transform: scale(1.05);
 }
