@@ -70,9 +70,6 @@ export default function Main() {
             {/* Error Message Display */}
             {error && <p className="error-message">{error}</p>}
 
-            <h2 className="form-text">Ingredients List:</h2>
-            {ingredients.length === 0 ? <p>No ingredients added yet.</p> : null}
-
             {/* Improved Ingredient List with Remove Option */}
             {ingredients.length > 0 && (
                 <ol className="form-list" aria-live="polite">
