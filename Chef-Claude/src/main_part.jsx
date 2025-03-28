@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Footer from "./section"; // Import Footer
 
 export default function Main() {
     const [ingredients, setIngredients] = useState([]);
@@ -20,7 +21,7 @@ export default function Main() {
         }
 
         setIngredients((prevIngredients) => [...prevIngredients, ingredient]);
-        setError(""); // Clear any previous errors
+        setError("");
         event.target.reset();
     }
 
@@ -38,23 +39,23 @@ export default function Main() {
         <main>
             <form onSubmit={addIngredient} className="form-main">
                 <div className="input-container">
-                <div className="icon">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#657789"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="feather feather-plus"
-                    >
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    </svg>
-                </div>
+                    <div className="icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#657789"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="feather feather-plus"
+                        >
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                    </div>
 
                     <input
                         type="text"
@@ -68,24 +69,27 @@ export default function Main() {
                 </button>
             </form>
 
-            {/* Error Message Display */}
             {error && <p className="error-message">{error}</p>}
 
-            {/* Improved Ingredient List with Remove Option */}
             {ingredients.length > 0 && (
-                <ol className="form-list" aria-live="polite">
-                    {ingredients.map((item, index) => (
-                        <li key={index}>
-                            {item}
-                            <button
-                                className="remove-button"
-                                onClick={() => removeIngredient(index)}
-                            >
-                                ✖
-                            </button>
-                        </li>
-                    ))}
-                </ol>
+                <>
+                    <ol className="form-list" aria-live="polite">
+                        {ingredients.map((item, index) => (
+                            <li key={index}>
+                                {item}
+                                <button
+                                    className="remove-button"
+                                    onClick={() => removeIngredient(index)}
+                                >
+                                    ✖
+                                </button>
+                            </li>
+                        ))}
+                    </ol>
+
+                    {/* Conditionally render Footer */}
+                    <Footer showFooter />
+                </>
             )}
         </main>
     );
