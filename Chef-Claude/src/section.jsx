@@ -1,4 +1,4 @@
-export default function Footer({ showFooter }) {
+export default function Footer({ showFooter ,generateRecipe }) {
     if (!showFooter) return null;  // Prevents rendering if `showFooter` is false
 
     return (
@@ -9,7 +9,7 @@ export default function Footer({ showFooter }) {
                     Generate recipe from your list of ingredients
                 </div>
             </div>
-            <button className="form-button_1">Get a recipe</button>
+            <button className="form-button_1"onClick={generateRecipe}>Get a recipe</button>
         </div>
     );
 }

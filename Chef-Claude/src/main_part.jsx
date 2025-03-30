@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Footer from "./section"; // Import Footer
+import Content from "./content"
 
 export default function Main() {
     const [ingredients, setIngredients] = useState([]);
     const [error, setError] = useState("");
-
+    const [showRecipe, setShowRecipe] = useState(false);
     function addIngredient(event) {
         event.preventDefault();
         const formData = new FormData(event.target);
@@ -29,6 +30,9 @@ export default function Main() {
         setIngredients((prevIngredients) =>
             prevIngredients.filter((_, i) => i !== index)
         );
+    }
+    function generateRecipe() {
+        setShowRecipe(true); // Show Content component when button is clicked
     }
 
     useEffect(() => {
@@ -86,9 +90,10 @@ export default function Main() {
                             </li>
                         ))}
                     </ol>
-
+                    {showRecipe && <Content />}    
                     {/* Conditionally render Footer */}
-                    <Footer showFooter />
+                    <Footer showFooter={ingredients.length > 0} generateRecipe={generateRecipe} />
+
                 </>
             )}
         </main>
