@@ -219,6 +219,7 @@ li:last-child {
   flex-direction: column; 
   width: 100%; 
   padding: 5px;
+  
 }
 
 .text_a {
@@ -255,7 +256,15 @@ li:last-child {
   margin-left: 0;
   margin-right: auto;
   justify-content: center;
-  margin-top: 20px; /* Space between header and recipe section */
+  margin-top: 20px;
+   /* Space between header and recipe section */
+}
+.recipe-subtitle{
+  font-weight: 600;
+  text-align: center;
+
+  padding-bottom: 5px; 
+  color: #15862d;
 }
 
 .list{
@@ -270,4 +279,11 @@ li:last-child {
   text-align: left; /* Align text to the left */
   display: flex; /* Ensure proper alignment */
   justify-content: flex-start; /* Push content to the left */
+}
+.recipe-intro{
+  font-weight: 600;
+  text-align: left;
+  gap: 4px;
+  padding-bottom: 5px;
+  color: #3A4750;
 }
